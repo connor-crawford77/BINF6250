@@ -4,31 +4,42 @@ This repository contains the deliverables for Northeastern University BINF6250 P
 Put pseudocode in this box:
 
 ```
-Read the file
-Initialize an empty dictionary where the keys are strings and the values are integers.
-Open the file with UTF-8 encoding.
+
+Initialize an empty dictionary where the keys are strings and the values are integers, to store disease counts.
+
+Open and read the file with UTF-8 encoding. If this fails, exit and raise error.
+
 For each line:
+
   If the line is empty or begins with '#', return a blank list.
-  Split the line by '\t' and remove trailing whitespaces and store elements as a list called fields.
-  If fields has less than 8 elements, return a blank list.
-  Extract the 8th element in fields.
+
+  Remove trailing whitespace, then split the line by '\t' and store elements as a list of fields.
+    If the fields list has less than 8 elements, return a blank list.
+    Otherwise, extract the 8th element in the list, which is INFO.
+  
   Store the elements in fields as a dictionary where the keys are strings and the values are either string or none.
     If the element contains '=', then the key is the string before '=' and the value is the string after '='
     If the element does not contain '=', then the key is the element and the value is none.
-  From the dictionary, pull the value for the key AF_EXAC. If this value is a placeholder or none, return an empty list.
-  If the value cannot be converted to a float, return an empty list. Otherwise, convert value to float.
-  If the value is above 0.0001, then return an empty list.
-  Pull the value for the key CLNDN from the dictionary.
-  If this value is a placeholder or none, return an empty list.
-  Split this value by the '|' and store as a list.
+  
+  From the dictionary of fields, pull the value for the key AF_EXAC. 
+    If this value is a placeholder or none, return an empty list.
+    If the value cannot be converted to a float, return an empty list. 
+    Otherwise, convert the value to float.
+  
+  If the converted value is above 0.0001, then return an empty list.
+  
+  Pull the value for the key CLNDN from the dictionary of fields.
+    If this value is a placeholder or none, return an empty list.
+    Otherwise, split this value by '|' and store it as a list.
+
   For each element of the CLNDN list, if it is either not_specified or not_provided, do not count it.
-  Otherwise, append it to a list of diseases (strings).
+  
+  Otherwise, append it to a list of diseases.
+  
   Return the disease list.
 
-For each disease list, elements that appear are either entered into the dictionary as a key with an initial value of 1 if it is the first time it appears or gets 1 added to its tally for each new occurence.
+For each disease list (either a list of strings or an empty list), elements that appear are either entered into the dictionary as a key with an initial value of 1 if it is the first time it appears or gets 1 added to its tally for each new occurence.
 
-
-If this fails, exit and raise error
 
 ```
 
@@ -43,7 +54,7 @@ In the beginning, we struggled with using GitHub and had to learn how to fork a 
 Sneha Kini- Ngoc Linh Nguyen and Thu Thu Han were both great partners. When briefly meeting after class, we all shared our strengths and weaknesses in terms of Python coding and GitHub. We were all a bit unfamiliar with GitHub, but we were quickly able to figure out together how to collaborate using pull requests and merges. Everyone was willing to meet outside of class time to get the project done efficiently, and the work load was shared evenly. When coding the actual project, I was a little slow at first since I had never worked with VCF files before, so figuring out how to parse the file with its unique format was a little tricky at first. We did not face any significant challenges and all steps of the project went relatively smoothly. As the team leader, I tried to set up meeting times to make sure the assignment got done in a timely manner.
 
 ## Other member
-Other members' reflections on the project
+Ngoc Linh Nguyen - My groupmates were great partners and we were able to coordinate times to collaborate and discuss as well as work separately while keeping each other posted through Teams chat. This project helped me better understand the internal structure of git as well as the collaboration layer of pull requests.
 
 # Generative AI Appendix
 We asked the Perplexity-based Course Assistant to clarify assignment instructions.
