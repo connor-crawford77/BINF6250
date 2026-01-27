@@ -56,5 +56,7 @@ Sneha Kini- Ngoc Linh Nguyen and Thu Thu Han were both great partners. When brie
 ## Other member
 Ngoc Linh Nguyen - My groupmates were great partners and we were able to coordinate times to collaborate and discuss as well as work separately while keeping each other posted through Teams chat. This project helped me better understand the internal structure of git as well as the collaboration layer of pull requests.
 
+Thu Thu Han - I believe I had great teammates for this project as we were able to communicate really well during our collaborative assignment through the teams meeting and chat. I struggled a little bit with GitHub repositories but my teammates really helped me out with figuring out how to fork a repository of my own. While writing out the test cases, I also learned from my teammate's code such as the type hint indicators in which I have not used them before. I believe that after this project I have gained a deeper understanding of functional file parsing and how to collaboratively work on a Github platform.  
+
 # Generative AI Appendix
 We asked the Perplexity-based Course Assistant to clarify assignment instructions.
