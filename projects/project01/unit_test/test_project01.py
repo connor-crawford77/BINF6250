@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-
+import os
+import pytest
 from projects.project01.project01 import parse_line, read_file
 
 def test_parse_line_VCF_format():
@@ -90,6 +91,9 @@ def test_parse_line_disease():
 
     assert result == ["Myasthenic_syndrome,_congenital,_8", "Severe_Myopia"]
 
+def test_read_file_OS_error():
+    """Test case for reading invalid file"""
+    with pytest.raises(SystemExit):
+        read_file("clinvar.vcf")
 
-
-
+    assert f"Error reading file: clinvar.vcf"
