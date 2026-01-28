@@ -59,4 +59,16 @@ Ngoc Linh Nguyen - My groupmates were great partners and we were able to coordin
 Thu Thu Han - I believe I had great teammates for this project as we were able to communicate really well during our collaborative assignment through the teams meeting and chat. I struggled a little bit with GitHub repositories but my teammates really helped me out with figuring out how to fork a repository of my own. While writing out the test cases, I also learned from my teammate's code such as the type hint indicators in which I have not used them before. I believe that after this project I have gained a deeper understanding of functional file parsing and how to collaboratively work on a Github platform.  
 
 # Generative AI Appendix
-We asked the Perplexity-based Course Assistant to clarify assignment instructions.
+We asked the Perplexity-based Course Assistant to clarify assignment instructions as following.
+- Could you clarify what "lexer implementation" means in the instructions?
+
+- For test cases, do we do unit tests with fake lines (since the input is hardcoded), and does this imply we should make no assumptions that the file or data is valid?
+
+- May we at least assume that the VCF format is respected, for example that the INFO field's position (8th column), or do we have to validate the structure of the file beyond the file extension and "##fileformat=VCFv4.1"?
+ 
+- Could you clarify what "lexer implementation" means in the instructions?
+
+- For test cases, do we do unit tests with fake data (since the input is hardcoded), and does this imply we should make no assumptions that the file or data is valid, and have built-in checks to potentially return error messages?
+
+- May we at least assume that the VCF format is respected, for example that the INFO field's position (8th column), or do we have to validate the structure of the file beyond the file extension and "##fileformat=VCFv4.1"?
+
