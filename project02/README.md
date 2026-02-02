@@ -4,7 +4,14 @@ This project involves the implementation of first-order and Nth-order Markov mod
 Put pseudocode in this box:
 
 ```
-Some pseudocode here
+get_next_word
+For every state in the Markov model:
+  Add up how many times each possible next word occurs
+  Convert counts into probabilities by dividing by the total
+Look up the list of possible next words for the current state
+Look up the corresponding probabilities for those next words
+Randomly select one next word using those probabilities
+Return the selected word
 ```
 
 # Successes
