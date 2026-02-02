@@ -12,6 +12,19 @@ Look up the list of possible next words for the current state
 Look up the corresponding probabilities for those next words
 Randomly select one next word using those probabilities
 Return the selected word
+
+Markov model for sonnet
+Create empty Markov model
+Open sonnets.txt
+Start with empty string for one sonnet
+For each line in the file:
+  Remove extra whitespace from the line
+If the line is blank:
+  Add the sonnet to the Markov model
+  Reset the sonnet text to empty
+Else:
+  Add the line to the current sonnet text
+Generate a random text sequence from the Markov model
 ```
 
 # Successes
