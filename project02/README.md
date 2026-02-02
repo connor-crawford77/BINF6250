@@ -12,8 +12,7 @@ Some pseudocode here
 Description of the team's learning points
 
 # Struggles
-Description of the stumbling blocks the team experienced
-
+One struggle we faced was making current_word a tuple in the get_random_text function for n > 1. At first, the function we built was taking current_word as a string and trying to replace the tuple with a string. 
 # Personal Reflections
 ## Group Leader
 Group leader's reflection on the project
