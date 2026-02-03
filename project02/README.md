@@ -15,6 +15,7 @@ Return the selected word
 
 
 generate_random_text
+
      Set random number generator with seed
      Determine the Markov model order at the time 
      Create a starting state using “*S” order number
@@ -33,6 +34,7 @@ Join all the generated words to form a sentence
 Return the sentence
 
 Markov model for one fish two fish
+
 Create an empty Markov model
 Open the one_fish_two_fish.txt
 Create an empty string to store the text
