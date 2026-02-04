@@ -1,9 +1,43 @@
 # Introduction
 This project involves the implementation of first-order and Nth-order Markov models. The models were used on sentences and writing pieces to calculate transition probabilities and generate new text.
 # Pseudocode
-Put pseudocode in this box:
 
 ```
+def build_markov_model(markov_model, new_text, order):
+  define start and stop states
+  add start state to the text
+
+  is our order greater than 1? if so:
+    create a list of tuples that contains every n combo of words starting from i = 0 up until the last word in the text has at least n order of words that succeed it.
+    (use this list of tuples for your order of words - if order = 1 just use the text split by whitespace with a start state added to it)
+
+
+  for each index and current word/order of words in the text:
+    if we are at a start state:
+      if the start state is already in our markov model:
+        if the next word is already in the inner dictionary mapped to our start state:
+          add a count val of 1 to the inner dict val
+        if the next word isn't in the inner dictionary:
+          initialize it with a val of 1
+      if the start state isn't already in our markov model:
+          initialize it with the outer start key mapped to an inner dictionary with the key being the next word with a value of 1
+
+    if we are at the end of the text:
+      if the word/order of words is in the markov model:
+        map the end state to 1 in the inner dictionary of the word/order of words
+      if this is the first time encountering the word/order of words:
+        add the word/order of words as a key in the outer dict and map the end state to 1 in the inner dictionary
+      exit the loop
+
+    if we're not at the start or the end of the text and the word/order of words is already in the markov model:
+      if the next word in the text has already been encountered after the current word/order of words add 1 to the frequency val of the inner dict associated with that next word
+      if the next word in the text hasn't been encountered initialize it as an inner dict key of the current word/order of words with a val of 1
+
+    if we are not at a start state or end state, and haven't encountered the current word/order of words before:
+      initialize the current word dict with a inner dict key of the next word in the text with a val of 1
+
+  return the markov model
+      
 get_next_word
 For every state in the Markov model:
   Add up how many times each possible next word occurs
