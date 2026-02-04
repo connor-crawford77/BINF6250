@@ -1,5 +1,7 @@
 # Introduction
 This project involves the implementation of first-order and Nth-order Markov models. The models were used on sentences and writing pieces to calculate transition probabilities and generate new text.
+
+The Jupyter Notebook with the complete code and that should be reviewed is markov_models.ipynb.
 # Pseudocode
 
 ```
@@ -92,16 +94,25 @@ Generate a random text sequence from the Markov model
 ```
 
 # Successes
-Description of the team's learning points
+The most rewarding part of this project was getting to collaborate amongst peers to resolve bugs and talk through ideas.
+An example of this comes from our generate_random_text() function. We initially had built it to only set the current word as the next word gathered from the get_next_word() function, which works fine for order = 1, but not so much for any other order. Our dilemma then became: 'how can we get every word from the current order of words except for it's very first element for orders greater than 1?' setting this new value equal to the current word would create a new tuple of words equal to the length of the order, with the next word included in the state.
+We were able to talk through strategies for this as a team, and ended up splicing the current word state tuple to include everything but it's first element, and add the current word to the tuple to create the proper state for the next function call of get_next_word.
+
+Ultimately we talked through many small steps like these to get the markov model and generate text for more complicated texts like Shakespeare sonnets.
 
 # Struggles
-One struggle we faced was making current_word a tuple in the get_random_text function for n > 1. At first, the function we built was taking current_word as a string and trying to replace the tuple with a string. 
+One struggle we faced was making current_word a tuple in the get_random_text function for n > 1. At first, the function we built was taking current_word as a string and trying to replace the tuple with a string.
+
+Another difficult thing to manage was the quantity of work required for the project and the time we had to work on it together. While we were able to talk through a lot of things in our meetings, we also still had a lot of work we each had to do on our own to get all the functions working. This meant that when we were working individually we had to update each other on what changes we were making to out code, why were making them, and how it would impact all other members.
+
+Ultimately, continuing to communicate on teams when we were working individually and providing updates as we made changes helped us deal with this.
 # Personal Reflections
 ## Group Leader
 Sneha: Jersha and Connor were both great group members. We were able to meet three times to work through the code together and problem solve.  I had never worked with Markov models before, so I found the implementation to be a little challenging  It was very helpful to talk through the logic involved in Markov model implementation in order find solutions for bugs in our code.
 
 ## Other member
-Other members' reflections on the project
+Connor: This project helped build more comfortability with group work and coding/programming. Meeting with group members multiple times to talk through ideas, logic, and code was very helpful for progressing through the project and developing my understanding of the material.
+In regards to the actual project, I felt like I regained familiarity with nested dictionaries and implementing multiple control flow statements (elif ended up being very helpful, and it had been a while since I'd used it). This project required me to be more thoughtful in the debugging process, I had to slow down, and think about what part of the code bugs were most likely coming from, which I struggle to do at times. Print statements became my best friends in that process. I know our code isn't perfect as it is, and one thing I'm starting to realize is that refactoring is often warranted and helps you understand not just the code, but the ideas behind the code even better - a lesson I will be taking forward. With that in mind I think it will be interesting to see, considering these repos are continually active and can be changed, how much these projects get updated as we learn new things during the course.
 
 # Generative AI Appendix
 As per the syllabus
